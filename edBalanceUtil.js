@@ -17,7 +17,7 @@ let token={
 
 let tokenAddress=token['KNC'];
 contractEtherDelta.methods.balanceOf(tokenAddress,userAddress).call()
-.then(res=>console.log(res));
+.then(res=>{console.log("your ether balance: "+res)});
    
 // contractEtherDelta.events.Order({}, { fromBlock: 0, toBlock: 'latest' }).call((error, eventResult) => {
 //     if (error)
@@ -27,14 +27,14 @@ contractEtherDelta.methods.balanceOf(tokenAddress,userAddress).call()
 //   });
 
 
-var subscription = web3.eth.subscribe('logs', {
-    address: addressEtherDelta,
-    topics: [null]
-}, function(error, result){
-    if (!error)
-        console.log(log);
-})
-.on("data", function(log){
-})
-.on("changed", function(log){
-});
+// var subscription = web3.eth.subscribe('logs', {
+//     address: addressEtherDelta,
+//     topics: [null]
+// }, function(error, result){
+//     if (!error)
+//         console.log(log);
+// })
+// .on("data", function(log){
+// })
+// .on("changed", function(log){
+// });
