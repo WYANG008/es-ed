@@ -110,7 +110,7 @@ request('http://api.etherscan.io/api?module=account&action=txlist&address='+eth_
     if(input!='0x'){  // interacting wiht smartcontract
       decoded_res=decoder(KNC_ABI,input);
 
-      //a trade
+      //a trade, take order
       if(decoded_res && decoded_res['name']==='trade'){
 
         if(decoded_res['params'][2].value==='0x0000000000000000000000000000000000000000'){
